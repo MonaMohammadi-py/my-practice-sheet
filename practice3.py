@@ -16,3 +16,6 @@ def main():
     else:
         tax_rate = float(tax_rate)
         print(round(calculate_price(price, tax_rate) , 2))
+
+
+main()
