@@ -1,3 +1,5 @@
+#https://github.com/MonaMohammadi-py/my-practice-sheet/blob/main/practice2.py
+
 def take_fruits():
     fruits = {}
     while True:
