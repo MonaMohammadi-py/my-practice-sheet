@@ -10,8 +10,10 @@ def calculate_price(price , tax_rate=0.1):
 def main():
     price = int(input())
     tax_rate = input()
+    if tax_rate != "":
+        tax_rate = float(tax_rate)
 
-    print(round(calculate_price(price , float(tax_rate=0.1))))
+    print(round(calculate_price(price , tax_rate=0.1) , 2))
 
 
 main()
