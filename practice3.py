@@ -12,10 +12,11 @@ def main():
     
     try:
         tax_rate = float(input())
-    except EOFError:
-        tax_rate = 0.1
-   
-    print(calculate_price(price , tax_rate))
+    except (EOFError , ValueError):
+        print(calculate_price(price))
+
+    else:
+        print(calculate_price(price , tax_rate))
 
 
 
