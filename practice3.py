@@ -1,21 +1,20 @@
-#https://github.com/MonaMohammadi-py/my-practice-sheet/blob/main/practice3.py
+# https://github.com/MonaMohammadi-py/my-practice-sheet/blob/main/practice3.py
 
-def calculate_price(price , tax_rate):
+def calculate_price(price, tax_rate):
     final_price = price * (1 + tax_rate)
     return final_price
 
 
-
-
 def main():
     price = int(input())
-    tax_rate = input()
-    if tax_rate == "":
-        print(round(calculate_price(price , tax_rate=0.1) , 2))
+
+    try:
+        tax_rate = float(input())
+    except EOFError:
+        print(round(calculate_price(price), 2))
 
     else:
-        tax_rate = float(tax_rate)
-        print(round(calculate_price(price , tax_rate) , 2))
+        print(round(calculate_price(price, tax_rate), 2))
 
 
 main()
