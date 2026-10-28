@@ -2,7 +2,7 @@
 
 def calculate_price(price , tax_rate=0.1):
     final_price = price * (1 + tax_rate)
-    return final_price
+    return round(final_price , 2)
 
 
 
@@ -13,13 +13,10 @@ def main():
     try:
         tax_rate = float(input())
     except EOFError:
-        print(round(calculate_price(price) , 2))
+        tax_rate = 0.1
+   
+    print(calculate_price(price , tax_rate))
 
-    except ValueError:
-        print(round(calculate_price(price) , 2))
-
-    else:        
-        print(round(calculate_price(price , tax_rate) , 2))
 
 
 main()
