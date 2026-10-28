@@ -15,6 +15,9 @@ def main():
     except EOFError:
         print(round(calculate_price(price) , 2))
 
+    except ValueError:
+        print(round(calculate_price(price) , 2))
+
     else:        
         print(round(calculate_price(price , tax_rate) , 2))
 
