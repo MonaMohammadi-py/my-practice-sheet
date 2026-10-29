@@ -8,11 +8,11 @@ def calculate_price(price , tax_rate=0.1):
 
 
 def main():
-    price = int(input())
+    price = float(input())
     
     try:
         tax_rate = float(input())
-    except (EOFError , ValueError):
+    except EOFError:
         print(calculate_price(price))
 
     else:
